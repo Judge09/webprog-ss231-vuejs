@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="css/flexbox-grid.css">
 </head>
 <body>
- 
+  <div id="app">
+    {{ message }} <br>
+    {{'Random number: ' + Math.ceil(Math.random()*6) }}
+  </div>
+   
 <div class="container">
   <header>
     </header>
@@ -67,11 +71,7 @@
   <footer>
     </footer>
 </div>
-<div id="app">
-  {{ message }} <br>
-  {{'Random number: ' + Math.ceil(Math.random()*6) }}
-</div>
- 
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="js/script.js"></script>
  
