@@ -4,6 +4,7 @@
   <food-item2/> <br>
   <food-item/> <br>
   <food-item2/> <br>
+  <personal-website/> <br>
 </template>
 
 <script></script>
