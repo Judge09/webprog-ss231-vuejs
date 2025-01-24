@@ -7,5 +7,5 @@ import personalwebsite from './components/personalwebsite.vue'
 const app = createApp(App)
 app.component('food-item', FoodItem)
 app.component('food-item2', FoodItem2)
-app.component('personal-website', personalwebsite)
+app.component('personalwebsite', personalwebsite)
 app.mount('#app')
