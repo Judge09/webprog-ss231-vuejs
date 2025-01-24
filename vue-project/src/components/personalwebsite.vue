@@ -1,7 +1,6 @@
 
-<!DOCTYPE html>
-<html>
-<head>
+<template>
+  <head>
     <title>My Personal Profile and About Me</title>
 </head>
 <body>
@@ -51,4 +50,13 @@
 <img src="html2.png" alt="me with my friends">
 
 </body>
-</html>
+</template>
+
+<script>
+
+</script>
+
+<style>
+
+</style>
+
