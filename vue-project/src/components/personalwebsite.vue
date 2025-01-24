@@ -42,9 +42,6 @@
 
 <h2>Picture Gallery</h2>
 
-<img src="html1.jpg" alt="me with my friends on my birthday">  
-
-<img src="html2.png" alt="me with my friends">
 
 </template>
 
