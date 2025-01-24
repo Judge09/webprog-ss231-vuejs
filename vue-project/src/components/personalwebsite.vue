@@ -1,9 +1,6 @@
 
 <template>
-  <head>
-    <title>My Personal Profile and About Me</title>
-</head>
-<body>
+
 
 <h1>About Me</h1>
 <p>Hello I'm Jhon Lloyd Nicolas, a 2nd Year BSCS-SS Student at Asia Pacific College </p>
@@ -49,14 +46,11 @@
 
 <img src="html2.png" alt="me with my friends">
 
-</body>
 </template>
 
 <script>
-
 </script>
 
 <style>
-
 </style>
 
