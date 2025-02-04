@@ -1,162 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Personal Profile and About Me</title>
-<link rel="stylesheet" href="css/style.css">
+  <title>My first Vue page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flexbox-grid.css?version=0.1">   
   <link rel="stylesheet" href="css/bind.css?version=0.1">   
-<link rel="stylesheet" href="css/flexbox-grid.css">
-  <link rel="stylesheet" href="css/shopping.css?version=0.1"> 
-  
+  <link rel="stylesheet" href="css/images.css?version=0.1">   
+  <link rel="stylesheet" href="css/shopping.css?version=0.1">   
 </head>
 <body>
-  <div id="app">
-    {{ message }} <br>
-    {{'Random number: ' + Math.ceil(Math.random()*6) }}
-       <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.
+
+    <div class="container">
+        <header>
+            <h1>Personal Profile Web page </h1>
+          </header>
+        <main>
+          <section class="main-content">
+                   
+            <div>1 <br>About Me </div>
+            <div>2 <br>Education / Achievements</div>
+            <div>3 <br>Course </div>  
+            <div>4 <br>IT Experience</div>
+            <div>5 <br>Hobbies & Interests</div>
+            <div>6 <br>Goals In Life / Dream</div>  
+            <div>7</div>
+    
+            </section>
+          <aside class="sidebar">  Sidebar
+            <br>Picture Gallery    
+        </aside>
+        </main>
+        <footer>  Asia Pacific College       </footer>
+      </div>
+    
+
+<div id="app">
+  {{ message }} <br>
+  {{'Random number: ' + Math.ceil(Math.random()*6) }}
+    <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.
+    </div>
 </div>
-  </div>
 
-  <div id="app2">
-<div>
-<figure v-for="x in manyFoods">
-<img v-bind:src="x.url">
-<figcaption>{{ x.name }}</figcaption>
-</figure>
-</div>
-</div>
-
-  <div id="app3">
-<form v-on:submit.prevent="addItem">
-<p>
-
-      What do you need? <br>
-<input type="text" required placeholder="item name.." v-model="itemName">
-</p>
-<p>
-
-      How many? <br>
-<input type="number" placeholder="number of items.." v-model="itemNumber">
-</p>
-<p>
-
-      Important?
-<label>
-<input type="checkbox" v-model="itemImportant">
-
-        {{ itemImportant }}
-</label>
-</p>
-<button type="submit">Add item</button>
-</form>
-<br>
-<hr>
- 
+<div id="app2">
   <div>
-<p><strong>Shopping list:</strong></p>
-<ul id="ulToFind">
-<li 
+    <figure v-for="x in manyFoods">
+      <img v-bind:src="x.url">
+      <figcaption>{{ x.name }}</figcaption>
+    </figure>
+  </div>
+</div>
+  
+<div id="app3">
+  <form v-on:submit.prevent="addItem">
+    <p>
+      What do you need? <br>
+      <input type="text" required placeholder="item name.." v-model="itemName">
+    </p>
+    <p>
+      How many? <br>
+      <input type="number" placeholder="number of items.." v-model="itemNumber">
+    </p>
+    <p>
+      Important?
+      <label>
+        <input type="checkbox" v-model="itemImportant">
+        {{ itemImportant }}
+      </label>
+    </p>
+    <button type="submit">Add item</button>
+  </form>
+  <br>
+  <hr>
 
+  <div>
+    <p><strong>Shopping list:</strong></p>
+    <ul id="ulToFind">
+      <li 
         v-for="item in shoppingList" 
-
         v-bind:class="{ impClass: item.important }"
-
         v-on:click="item.found=!item.found"
-
         v-show="!item.found">
-
           {{ item.name }}, {{ item.number}}
-</li>
-</ul>
-<ul id="ulFound">
-<li 
-
+      </li>
+    </ul>
+    <ul id="ulFound">
+      <li 
         v-for="item in shoppingList" 
-
         v-bind:class="{ impClass: item.important }"
-
         v-on:click="item.found=!item.found"
-
         v-show="item.found">
-
           {{ item.name }}, {{ item.number}}
-</li>
-</ul>
-</div>
-</div>
- 
- 
- 
-   
-<div class="container">
-  <header>
-    </header>
-  <main>
-    <section class="main-content">
-
-        
-
-      
-<h1>About Me</h1>
-<p>Hello I'm Jhon Lloyd Nicolas, a 2nd Year BSCS-SS Student at Asia Pacific College </p>
-
-<h2>Education / Achievements</h2>
-<ul>
-  <li>X-QUIZ IT Inter-department Quiz Bee - 2nd Place</li>
-  <li>TCU President's Cup 2022 - 2nd Place</li>
-  <li>JISSA CTF 2023 - 5th Place</li>
-  <li>Retrotech CTF 2023 - Finalist</li>
-  <li>HackForGov 3 NCR 2024 - 3rd Place</li>
-  <li>APC-MSC President 2024-2025</li>
-</ul>
-
-<h2>Course</h2>
-<table>
-  <tr>
-      <th>Course Name</th>
-      <th>Year</th>
-  </tr>
-  <tr>
-      <td>Software System</td>
-      <td>2nd year</td>
-  </tr>
-</table>
-
-<h2>IT Experience</h2>
-<p>I encountered the basics of Java and Python when I was in Senior High School and I became interested in cybersecurity during my first year of college.</p>
-
-<h2>Hobbies & Interests</h2>
-<ul>
-  <li>Sleeping</li>
-  <li>Participating in CTF Competitions</li>
-  <li>Exploring new type of games</li>
-</ul>
-
-<h2>Goals In Life / Dream</h2>
-<p>I want to leave a mark in the history of cybersecurity.</p>
-
-<h2>Picture Gallery</h2>
-
-<img src="html1.jpg" alt="me with my friends on my birthday">  
-
-<img src="html2.png" alt="me with my friends">
-
-
-
-      </section>
-    <aside class="sidebar">
-      </aside>
-  </main>
-  <footer>
-    </footer>
+      </li>
+    </ul>
+  </div>
 </div>
 
+
+  
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="js/script.js"></script>
-<script src="js/image.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
 <script src="js/shopping.js"></script>
 
-
- 
 </body>
 </html>
-
