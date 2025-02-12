@@ -22,7 +22,7 @@ onMounted(() => {
 
 
    <h1>Food</h1>
-  <personal-profile/> <br>
+  <personalwebsite/> <br>
   <food-item/> 
   <food-item2/>
   <food-item/> 
