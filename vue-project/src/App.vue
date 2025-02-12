@@ -18,7 +18,7 @@ onMounted(() => {
   
       <ul>
       <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
-      </ul>
+    </ul>
 
 
    <h1>Food</h1>
@@ -30,3 +30,10 @@ onMounted(() => {
 </template>
 
 <style></style>
+
+
+
+
+
+
+
